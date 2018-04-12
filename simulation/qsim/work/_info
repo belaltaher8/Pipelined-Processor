@@ -1,0 +1,193 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Student/pc4-belaltaher8/simulation/qsim
+valu
+Z1 !s110 1520136087
+!i10b 1
+!s100 I<]lU[U5EC?kOMnjJD:oX3
+In_UXNR5_KZVMLQdIVD9X53
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1520136085
+Z3 8processor.vo
+Z4 Fprocessor.vo
+Z5 L0 32
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1520136087.000000
+Z8 !s107 processor.vo|
+Z9 !s90 -work|work|processor.vo|
+!i113 1
+Z10 o-work work
+valu_vlg_vec_tst
+R1
+!i10b 1
+!s100 ^?ZC`G;47UYNn3fimD=aT2
+IT9[WP@VmXDi=JG<ef7Cl72
+R2
+R0
+w1520136082
+8Waveform38.vwf.vt
+FWaveform38.vwf.vt
+Z11 L0 30
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform38.vwf.vt|
+!s90 -work|work|Waveform38.vwf.vt|
+!i113 1
+R10
+vhard_block
+Z12 !s110 1520171621
+!i10b 1
+!s100 i<]La38be18mMWT``jC`o2
+I8UiEN`87NTzdUR7KaP0mW2
+R2
+Z13 dC:/Users/Belal Taher/Documents/GitHub/pc4-belaltaher8/simulation/qsim
+Z14 w1520171618
+R3
+R4
+L0 81359
+Z15 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z16 !s108 1520171621.000000
+R8
+R9
+!i113 1
+R10
+Z17 tCvgOpt 0
+vmy_12bit_register
+Z18 !s110 1519691273
+!i10b 1
+!s100 F3ciQ0Zmm1RZ;e19o;IIl1
+I?YRN3JSVA<P2Xl;ikZbk53
+R2
+R0
+w1519691272
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z19 !s108 1519691273.000000
+R8
+R9
+!i113 1
+R10
+vmy_12bit_register_vlg_vec_tst
+R18
+!i10b 1
+!s100 >Tk[`n4n810DfGh>OC7TR2
+IFgZBh5jS@HUV541JUQL7`2
+R2
+R0
+w1519691268
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+R19
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R10
+vmy_5bit_comparator
+!s110 1519870928
+!i10b 1
+!s100 >I>=enolY0kWO=Im1RA3<3
+IflJ?joUDhf2gBLKoOkPXI3
+R2
+Z20 dC:/Users/Student/Desktop/edwin_lara_final/pc4-belaltaher8/simulation/qsim
+w1519870927
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1519870928.000000
+R8
+R9
+!i113 1
+R10
+vmy_5bit_comparator_vlg_vec_tst
+!s110 1519870929
+!i10b 1
+!s100 S6@>@6?2XUgYROA[Si]0D3
+IAiNVF=e33OoQP>0QS^9cF3
+R2
+R20
+w1519870923
+8Waveform13.vwf.vt
+FWaveform13.vwf.vt
+R11
+R6
+r1
+!s85 0
+31
+!s108 1519870929.000000
+!s107 Waveform13.vwf.vt|
+!s90 -work|work|Waveform13.vwf.vt|
+!i113 1
+R10
+vskeleton
+R12
+!i10b 1
+!s100 2kN0P:42YD3J=3C<WO2aV2
+I1@AKULf^FgLH:_DRiH4672
+R2
+R13
+R14
+R3
+R4
+L0 31
+R15
+r1
+!s85 0
+31
+R16
+R8
+R9
+!i113 1
+R10
+R17
+vskeleton_vlg_vec_tst
+R12
+!i10b 1
+!s100 @dfmHRTA?lbEz7I?0bH6O3
+IDfzemkSeHa5ggY;MO28UN0
+R2
+R13
+w1520171616
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R15
+r1
+!s85 0
+31
+R16
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R10
+R17

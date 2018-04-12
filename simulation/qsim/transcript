@@ -1,0 +1,117 @@
+# do processor.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:53:41 on Mar 04,2018
+# vlog -work work processor.vo 
+# -- Compiling module skeleton
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	skeleton
+# End time: 08:53:41 on Mar 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:53:41 on Mar 04,2018
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module skeleton_vlg_vec_tst
+# 
+# Top level modules:
+# 	skeleton_vlg_vec_tst
+# End time: 08:53:41 on Mar 04,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.skeleton_vlg_vec_tst 
+# Start time: 08:53:42 on Mar 04,2018
+# Loading work.skeleton_vlg_vec_tst
+# Loading work.skeleton
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from processor_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 12543 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# Loading timing data from processor_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst File: Waveform.vwf.vt
+# after#26
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2698 ps, d:2701 ps, 222 ps );
+#    Time: 2701 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a5 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2713 ps, d:2728 ps, 222 ps );
+#    Time: 2728 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a12 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d[0]:2731 ps, 222 ps );
+#    Time: 2731 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a28 /we_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2709 ps, d:2736 ps, 222 ps );
+#    Time: 2736 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2706 ps, d:2737 ps, 222 ps );
+#    Time: 2737 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a2 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2708 ps, d:2738 ps, 222 ps );
+#    Time: 2738 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a22 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2717 ps, d[0]:2739 ps, 222 ps );
+#    Time: 2739 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a8 /we_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2726 ps, d:2747 ps, 222 ps );
+#    Time: 2747 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a25 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2747 ps, 222 ps );
+#    Time: 2747 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a28 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2726 ps, d:2756 ps, 222 ps );
+#    Time: 2756 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a25 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2760 ps, 222 ps );
+#    Time: 2760 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a22 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2774 ps, 222 ps );
+#    Time: 2774 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a2 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2779 ps, 222 ps );
+#    Time: 2779 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a2 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d[0]:2781 ps, 222 ps );
+#    Time: 2781 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a22 /we_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2790 ps, 222 ps );
+#    Time: 2790 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a6 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2713 ps, d:2793 ps, 222 ps );
+#    Time: 2793 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a12 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2698 ps, d:2794 ps, 222 ps );
+#    Time: 2794 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a5 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2801 ps, 222 ps );
+#    Time: 2801 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a10 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2801 ps, 222 ps );
+#    Time: 2801 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a22 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2735 ps, d:2803 ps, 222 ps );
+#    Time: 2803 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a14 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2724 ps, d:2808 ps, 222 ps );
+#    Time: 2808 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2808 ps, 222 ps );
+#    Time: 2808 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a22 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2709 ps, d:2809 ps, 222 ps );
+#    Time: 2809 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a7 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2735 ps, d:2811 ps, 222 ps );
+#    Time: 2811 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a16 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2734 ps, d:2812 ps, 222 ps );
+#    Time: 2812 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a18 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2825 ps, 222 ps );
+#    Time: 2825 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a28 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2724 ps, d:2829 ps, 222 ps );
+#    Time: 2829 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a0 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2842 ps, 222 ps );
+#    Time: 2842 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a6 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2718 ps, d:2847 ps, 222 ps );
+#    Time: 2847 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a2 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2707 ps, d:2861 ps, 222 ps );
+#    Time: 2861 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a28 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2726 ps, d:2873 ps, 222 ps );
+#    Time: 2873 ps  Iteration: 0  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a25 /addr_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2739 ps, d:2902 ps, 222 ps );
+#    Time: 2902 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_dmem|altsyncram_component|auto_generated|ram_block1a16 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/17.1std/590/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2698 ps, d:2908 ps, 222 ps );
+#    Time: 2908 ps  Iteration: 1  Instance: /skeleton_vlg_vec_tst/i1/\my_imem|altsyncram_component|auto_generated|ram_block1a5 /addr_a_register
+# Simulation time: 0 ps
+# ** Note: $finish    : Waveform.vwf.vt(58)
+#    Time: 1 us  Iteration: 0  Instance: /skeleton_vlg_vec_tst
+# End time: 08:53:48 on Mar 04,2018, Elapsed time: 0:00:06
+# Errors: 33, Warnings: 1

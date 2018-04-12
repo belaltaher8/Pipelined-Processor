@@ -1,0 +1,23 @@
+module my_5bit_register(input_data, clock, write_enable, output_data, clear);
+
+	input [4:0] input_data;
+	input clock, write_enable, clear;
+	
+	output [4:0] output_data;
+	
+	wire enableWire;
+	wire [4:0] tempOutput;
+	
+	and myAnd(enableWire, clock, write_enable);
+	
+	genvar i;
+	generate
+	for(i = 0; i < 5; i = i+1) begin: flipFlopLoop
+		dflipflop curr_dff(input_data[i], clear, enableWire, clock, output_data[i]);
+	end
+	endgenerate
+	
+endmodule
+	
+	
+	

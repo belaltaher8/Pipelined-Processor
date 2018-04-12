@@ -1,0 +1,13 @@
+module dflipflop(input_data, clear, clock, output_data);
+
+	input input_data, clear, clock;
+	output output_data;
+	reg output_data;
+	
+	always@(posedge clock) begin
+		case(clear)
+			1'b0: output_data = input_data;
+			1'b1: output_data = 1'b0;
+		endcase
+	end
+endmodule

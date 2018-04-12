@@ -1,0 +1,37 @@
+module regfile(
+	clock, ctrl_writeEnable, ctrl_reset, ctrl_writeReg,
+	ctrl_readRegA, ctrl_readRegB, data_writeReg, data_readRegA,
+	data_readRegB
+);
+
+	input clock, ctrl_writeEnable, ctrl_reset;
+	input [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
+	input [31:0] data_writeReg;
+	output [31:0] data_readRegA, data_readRegB;
+	
+	wire [31:0] registerA, registerB, registerToWrite;
+    
+	wire [1023:0] registerOutput;
+
+    
+	my_5to32_decoder readA(ctrl_readRegA, registerA,  1'b1);
+	my_5to32_decoder readB(ctrl_readRegB, registerB,  1'b1);
+    
+	my_5to32_decoder writeReg(ctrl_writeReg, registerToWrite, ctrl_writeEnable);
+	
+    my_register zero_reg(data_writeReg, clock, 1'b0, registerOutput[31:0], 1'b1);
+	 my_32tri zero_triA(registerOutput[31:0], data_readRegA, registerA[0]);
+	 my_32tri zero_triB(registerOutput[31:0], data_readRegB, registerA[0]);
+    
+	genvar k;
+	generate
+	for(k = 1; k < 32; k = k+1) begin: registerLoop
+		my_register curr_register(data_writeReg, clock, registerToWrite[k], registerOutput[32*k+31:32*k], ctrl_reset);
+        my_32tri curr_triA(registerOutput[32*k+31:32*k], data_readRegA, registerA[k]);
+        my_32tri curr_triB(registerOutput[32*k+31:32*k], data_readRegB, registerB[k]);
+    end
+	endgenerate
+	
+endmodule
+
+

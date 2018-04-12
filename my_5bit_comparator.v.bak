@@ -1,0 +1,15 @@
+module my_5bit_comparator(inputA, inputB, EQ);
+
+	input [4:0] inputA, inputB;
+	
+	output EQ;
+	
+	
+	wire bit0, bit1, bit2, bit3, bit4;
+	
+	my_1bit_xor xor0(bit0, inputA[0], inputB[0]);
+	my_1bit_xor xor1(bit1, inputA[1], inputB[1]);
+	my_1bit_xor xor2(bit2, inputA[2], inputB[2]);
+	my_1bit_xor xor3(bit3, inputA[3], inputB[3]);
+	
+	and myEQAnd(EQ, ~bit4, ~bit3, ~bit2, ~bit1, ~bit0)

@@ -1,0 +1,95 @@
+module alu(data_operandA, data_operandB, ctrl_ALUopcode, ctrl_shiftamt, data_result, isNotEqual, isLessThan, overflow);
+
+	input [31:0] data_operandA, data_operandB;
+	input [4:0] ctrl_ALUopcode, ctrl_shiftamt;
+	
+	output [31:0] data_result;
+	output isNotEqual, isLessThan, overflow;
+    
+    wire[31:0] bInputToAdder;
+    wire[31:0] negativeB;
+	
+	 wire [31:0] bitwiseAndOutput, bitwiseOrOutput, leftShiftOutput, rightShiftOutput, addOutput;
+    wire sub;
+    wire carry_out;
+    wire Ocase1, Ocase2, Ocase3, Ocase4;
+    wire R, notR, S, notS, Pa, notPa, Pb, notPb;
+    wire notOverflow;
+    wire isEqual;
+    wire lessThanCase1, lessThanCase2, lessThanCase3;
+    wire [31:0] invertedResult;
+    
+    assign sub = ctrl_ALUopcode[0];
+	
+    // And/Or
+    
+	my_bitwise_and bitwiseAnd(data_operandA, data_operandB, bitwiseAndOutput);
+	my_bitwise_or bitwiseOr(data_operandA, data_operandB, bitwiseOrOutput);
+	
+    //Shifting
+    
+    my_32bit_barrelLeftShifter leftShifter(data_operandA, ctrl_shiftamt, leftShiftOutput);
+    my_32bit_barrelRightShifter rightShifter(data_operandA, ctrl_shiftamt, rightShiftOutput);
+    
+    // Finds ~b for when we do subtraction
+    
+    genvar k;
+	generate
+	for(k = 31; k >= 0; k = k-1) begin: negB
+		not myNotB(negativeB[k], data_operandB[k]);
+    end
+	endgenerate
+    
+    
+    //Adder
+    
+    my_32bit2to1_mux myMux1(data_operandB, negativeB, bInputToAdder, sub);
+    my_ALU_adder adder(data_operandA, bInputToAdder, sub, addOutput, carry_out);
+    
+    
+    // Overflow
+    assign R = data_result[31];
+    assign Pa = data_operandA[31];
+    assign Pb = data_operandB[31];
+    
+    not myNot1(notR, R);
+    not myNot2(notPa, Pa);
+    not myNot3(notPb, Pb);
+    not myNot4(notS, sub);
+    
+    and overflowAnd1(Ocase1, notR, sub, Pa, notPb);
+    and overflowAnd2(Ocase2, sub, notPa, Pb, R);
+    and overflowAnd3(Ocase3, notS, notPa, notPb, R);
+    and overflowAnd4(Ocase4, notS, Pa, Pb, notR); 
+    
+    or overflowOr(overflow, Ocase1, Ocase2, Ocase3, Ocase4);
+    
+    
+    // Is not equal to
+    
+    genvar j;
+	generate
+	for(j = 31; j >= 0; j = j-1) begin: invertResult
+		not myNotResult(invertedResult[j], data_result[j]);
+    end
+	endgenerate
+    
+    and isEqualGate(isEqual, invertedResult[31:0]);
+    not isNotEqualGate(isNotEqual, isEqual);
+    
+    
+    // Less Than
+    
+    and andLessThan1(lessThanCase1, data_operandA[31], ~data_operandB[31]);
+    and andLessThan2(lessThanCase2, ~data_operandA[31], ~data_operandB[31], data_result[31]);
+    and andLessThan3(lessThanCase3, data_operandA[31], data_operandB[31], ~data_result[31]);
+    
+    or isLessThanGate(isLessThan, lessThanCase1, lessThanCase2, lessThanCase3);
+    
+    
+    // Mux for output
+    
+    my_32bit8to1_mux myMux2(addOutput, addOutput, bitwiseAndOutput, bitwiseOrOutput, leftShiftOutput, rightShiftOutput, 1'b0, 1'b0, data_result, ctrl_ALUopcode[2:0]);
+	
+	
+endmodule
