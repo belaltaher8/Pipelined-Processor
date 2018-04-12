@@ -8,31 +8,33 @@ The repository includes:
 * Arithmetic-Logic Unit
 * Data Memory
 * Stall Logic
-* Bypassing Logic
+* Bypassing Logic for both Execute and Memory
 * Hazard Detection
 * 30+ Page technical report with illustrations and implementation/interface details
+* Waveform diagrams from Quartus Prime illustrating processor functionality
 
 ## Processor
-
-![Processor]()
+![Processor](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Processor.jpg)
 
 ## Fetch
-![Processor]()
-![Processor]()
+![Fetch](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Fetch.jpg)
 
 ## Decode
-![Processor]()
-![Processor]()
+![Decode1](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Decode1.jpg)
+![Decode2](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Decode2.jpg)
 
 ## Execute
-![Processor]()
-![Processor]()
+![Execute](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Execute.jpg)
+
+## Execute Bypassing
+![ExecuteBypassing](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/ExecuteBypassing.jpg)
 
 ## Memory 
-![Processor]()
-![Processor]()
+![Memory](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Memory.jpg)
+
+## Memory Bypassing
+![MemBypassing](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/ExecuteBypassing.jpg)
 
 ## Write
-![Processor]()
-![Processor]()
+![Processor](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Write.jpg)
 
