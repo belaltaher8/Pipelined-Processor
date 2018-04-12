@@ -33,7 +33,7 @@ The repository includes:
 ![Memory](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Memory.jpg)
 
 ## Memory Bypassing
-![MemBypassing](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/ExecuteBypassing.jpg)
+![MemBypassing](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/MemBypassing.jpg)
 
 ## Write
 ![Processor](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Write.jpg)
