@@ -16,6 +16,9 @@ The repository includes:
 ## Processor
 ![Processor](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Processor.jpg)
 
+## Instruction Set
+![ISA](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/PipelinedProcessorISA.PNG)
+
 ## Fetch
 ![Fetch](https://raw.githubusercontent.com/belaltaher8/Pipelined-Processor/master/Fetch.jpg)
 
